@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <script src="../static/js/main.js"></script>
+  </head>
+  <body class="font-sans text-gray-800">
+    <nav
+      class="bg-white fixed w-full top-0 z-50 border-b border-gray-200 shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <a href="index.html" class="flex items-center space-x-4">
+            <img
+              src="../static/images/muktinath.png"
+              alt="Muktinath Darshan"
+              class="h-16"
+            />
+            <span class="text-lg font-semibold text-blue-900"
+              >Muktinath Darshan</span
+            >
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600"
+              >Home</a
+            >
+            <a href="services.html" class="text-gray-700 hover:text-blue-600"
+              >Services</a
+            >
+            <a href="gallery.html" class="text-gray-700 hover:text-blue-600"
+              >Gallery</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-blue-600 font-semibold"
+              >About</a
+            >
+            <a href="contact.html" class="text-gray-700 hover:text-blue-600"
+              >Contact</a
+            >
+          </div>
+
+          <a
+            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire"
+            target="_blank"
+            class="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium"
+          >
+            Enquire on WhatsApp
+          </a>
+
+          <button id="menu-btn" class="md:hidden text-2xl text-gray-700">
+            ☰
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-200"
+      >
+        <div class="px-4 py-4 space-y-3">
+          <a href="index.html" class="block text-gray-700">Home</a>
+          <a href="services.html" class="block text-gray-700">Services</a>
+          <a href="gallery.html" class="block text-gray-700">Gallery</a>
+          <a href="about.html" class="block text-gray-700 font-semibold"
+            >About</a
+          >
+          <a href="contact.html" class="block text-gray-700">Contact</a>
+          <a
+            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire"
+            target="_blank"
+            class="block text-center bg-green-600 text-white py-2 rounded-lg"
+          >
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pt-20"></div>
+
+    <div class="relative">
+      <img
+        src="../static/images/about1.jpg"
+        alt="About Banner"
+        class="w-full h-64 md:h-96 object-cover"
+      />
+      <div
+        class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-25"
+      >
+        <h1 class="text-white text-3xl md:text-5xl font-bold">About Us</h1>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12">
+      <h2
+        class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4 text-center"
+      >
+        Company Overview
+      </h2>
+      <p class="text-gray-600 max-w-3xl mx-auto text-center">
+        Muktinath Darshan Tours and Travels Pvt. Ltd is a leading tourism
+        company specializing in adventure, religious, and sightseeing tours
+        across Nepal. We aim to provide memorable, safe, and comfortable travel
+        experiences for all our visitors. Our official website acts as an
+        information and lead-generation platform, helping you connect with us
+        instantly via WhatsApp.
+      </p>
+    </div>
+
+    <div class="bg-gray-100 py-12">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center"
+        >
+          Our Mission & Philosophy
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Our Mission</h3>
+            <p class="text-gray-600">
+              To provide high-quality tourism services that ensure safety,
+              comfort, and unforgettable experiences for all our clients. We
+              strive to make every journey seamless and memorable.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Our Service Philosophy</h3>
+            <p class="text-gray-600">
+              Customer satisfaction is our top priority. We emphasize
+              professionalism, reliability, and personal attention in every
+              service we offer, ensuring travelers feel valued and cared for
+              throughout their journey.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12">
+      <h2
+        class="text-2xl md:text-3xl font-semibold text-gray-800 mb-8 text-center"
+      >
+        Our Branches
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Kathmandu -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="../static/images/kathmandu.jpg"
+            alt="Kathmandu Branch"
+            class="w-full h-72 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Kathmandu Branch</h3>
+            <p class="text-gray-600 mb-4">
+              Located in the heart of Kathmandu, our branch offers personalized
+              travel assistance and all major tour packages.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pokhara -->
+        <div
+          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+        >
+          <img
+            src="../static/images/pokhara.jpg"
+            alt="Pokhara Branch"
+            class="w-full h-72 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold mb-2">Pokhara Branch</h3>
+            <p class="text-gray-600 mb-4">
+              Our Pokhara branch helps you plan adventure, sightseeing tours in
+              and around the scenic city.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-green-600 py-12">
+      <div class="container mx-auto text-center">
+        <h3 class="text-white text-2xl md:text-3xl font-semibold mb-4">
+          Have Questions? Reach Us Directly
+        </h3>
+        <a
+          href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire"
+          target="_blank"
+          class="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+        >
+          Contact Us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
