@@ -1,251 +1,201 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../static/css/style.css" />
-  </head>
 
-  <body class="bg-gray-100 text-gray-800">
-    <nav
-      class="bg-white fixed w-full top-0 z-50 border-b border-gray-200 shadow-sm"
-    >
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-          <a href="index.html" class="flex items-center space-x-4">
-            <img
-              src="images/muktinath.png"
-              alt="Muktinath Darshan"
-              class="h-16"
-            />
-            <span class="text-lg font-semibold text-blue-900"
-              >Muktinath Darshan</span
-            >
-          </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - Muktinath Darshan Tours &amp; Travels</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../static/css/style.css" />
+</head>
 
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="hover:text-blue-600">Home</a>
-            <a href="services.html" class="text-blue-600 font-medium"
-              >Services</a
-            >
-            <a href="gallery.html" class="hover:text-blue-600">Gallery</a>
-            <a href="about.html" class="hover:text-blue-600">About</a>
-            <a href="contact.html" class="hover:text-blue-600">Contact</a>
-          </div>
+<body class="bg-gray-100 text-gray-800">
+  <nav class="bg-white fixed w-full top-0 z-50 border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-4">
+          <img src="images/muktinath.png" alt="Muktinath Darshan" class="h-16" />
+          <span class="text-lg font-semibold text-blue-900">Muktinath Darshan</span>
+        </a>
 
-          <a
-            href="https://wa.me/9806518595"
-            target="_blank"
-            class="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm"
-          >
-            WhatsApp
-          </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="services.html" class="text-blue-600 font-medium">Services</a>
+          <a href="gallery.html" class="hover:text-blue-600">Gallery</a>
+          <a href="about.html" class="hover:text-blue-600">About</a>
+          <a href="contact.html" class="hover:text-blue-600">Contact</a>
         </div>
-      </div>
-    </nav>
 
-    <div class="pt-24 pb-12 bg-gray-900 text-white text-center">
-      <h1 class="text-3xl md:text-4xl font-semibold mb-4">Our Services</h1>
-      <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-        Explore our wide range of tourism services — adventure, sightseeing,
-        religious tours, and air services — all curated for an unforgettable
-        experience.
+        <a href="https://wa.me/9806518595" target="_blank"
+          class="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="pt-24 pb-12 bg-gray-900 text-white text-center">
+    <h1 class="text-3xl md:text-4xl font-semibold mb-4">Our Services</h1>
+    <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
+      Explore our wide range of tourism services — adventure, sightseeing,
+      religious tours, and air services — all curated for an unforgettable
+      experience.
+    </p>
+  </div>
+
+  <!-- Search Results Banner (shown when searching) -->
+  <div id="search-banner"
+    class="hidden bg-blue-50 border-b border-blue-200 py-3 px-4 text-center text-blue-800 text-sm font-medium">
+    Showing results for: <span id="search-query-display" class="font-bold"></span>
+    &nbsp;·&nbsp;
+    <a href="services.html" class="underline text-blue-600 hover:text-blue-800">Clear search</a>
+  </div>
+
+  <div id="services-grid"
+    class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <!-- Shared Vehicle -->
+    <div id="service-shared-vehicle" data-service="Shared Vehicle comfortable shared travel tourists transport"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/shared_vechicle.jpg" alt="Shared Vehicle" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Shared Vehicle</h3>
+        <p class="text-gray-600 mb-4">
+          Comfortable shared travel options for tourists.
+        </p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Shared%20Vehicle"
+          target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+
+    <!-- Paragliding -->
+    <div id="service-paragliding" data-service="Paragliding flying adventure thrill scenic landscapes aerial"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/paragliding.jpg" alt="Paragliding" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Paragliding</h3>
+        <p class="text-gray-600 mb-4">
+          Experience the thrill of flying over scenic landscapes.
+        </p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Paragliding" target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+
+    <!-- Zip Flyer -->
+    <div id="service-zip-flyer" data-service="Zip Flyer zipflyer breathtaking views adventure"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/zipflyer.jpg" alt="Zip Flyer" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Zip Flyer</h3>
+        <p class="text-gray-600 mb-4">Zip across breathtaking views.</p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Zip%20Flyer" target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+
+    <!-- Rafting -->
+    <div id="service-rafting" data-service="Rafting Seti River white water adventure exciting"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/rafting.jpg" alt="Rafting" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Rafting (Seti River)</h3>
+        <p class="text-gray-600 mb-4">
+          Exciting white water rafting experience.
+        </p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Rafting" target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+
+    <!-- Trekking -->
+    <div id="service-trekking" data-service="Trekking hiking trails Nepal mountains explore scenic"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/trekking.jpg" alt="Trekking" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Trekking</h3>
+        <p class="text-gray-600 mb-4">Explore scenic trails across Nepal.</p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Trekking" target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+
+    <!-- Hot Air Balloon -->
+    <div id="service-hot-air-balloon" data-service="Hot Air Balloon aerial views landscapes sky flight"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/hotairballoon.jpg" alt="Hot Air Balloon" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Hot Air Balloon</h3>
+        <p class="text-gray-600 mb-4">
+          Enjoy aerial views of breathtaking landscapes.
+        </p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Hot%20Air%20Balloon"
+          target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+
+    <!-- Heli Service -->
+    <div id="service-heli" data-service="Heli Service helicopter tour private exclusive flight"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/helicoptertour.jpg" alt="Heli Service" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Heli Service</h3>
+        <p class="text-gray-600 mb-4">
+          Private helicopter tours for exclusive experiences.
+        </p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Heli%20Service"
+          target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+
+    <!-- Glider -->
+    <div id="service-glider" data-service="Glider gliding peaceful ride scenic landscapes aerial"
+      class="service-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+      <img src="images/glider.jpg" alt="Glider" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Glider</h3>
+        <p class="text-gray-600 mb-4">
+          Experience peaceful glider rides over scenic landscapes.
+        </p>
+        <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Glider" target="_blank"
+          class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+          View Details
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- No Results Message -->
+  <div id="no-results" class="hidden text-center py-16 text-gray-500 text-lg">
+    😕 No services found matching your search. Try another keyword.
+  </div>
+
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-8 text-center">
+      <div class="h-px bg-gray-700/50 mb-4"></div>
+      <p class="text-sm">
+        &copy; 2026 Muktinath Darshan Tours &amp; Travels. All Rights Reserved.
       </p>
     </div>
+  </footer>
 
-    <div
-      class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
-    >
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/shared_vechicle.jpg"
-          alt="Shared Vehicle"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Shared Vehicle</h3>
-          <p class="text-gray-600 mb-4">
-            Comfortable shared travel options for tourists.
-          </p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Shared%20Vehicle"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
+  <script src="../static/js/main.js" defer></script>
+</body>
 
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/paragliding.jpg"
-          alt="Paragliding"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Paragliding</h3>
-          <p class="text-gray-600 mb-4">
-            Experience the thrill of flying over scenic landscapes.
-          </p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Paragliding"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/zipflyer.jpg"
-          alt="Zip Flyer"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Zip Flyer</h3>
-          <p class="text-gray-600 mb-4">Zip across breathtaking views.</p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Zip%20Flyer"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/rafting.jpg"
-          alt="Rafting"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Rafting (Seti River)</h3>
-          <p class="text-gray-600 mb-4">
-            Exciting white water rafting experience.
-          </p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Rafting"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/trekking.jpg"
-          alt="Trekking"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Trekking</h3>
-          <p class="text-gray-600 mb-4">Explore scenic trails across Nepal.</p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Trekking"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/hotairballoon.jpg"
-          alt="Hot Air Balloon"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Hot Air Balloon</h3>
-          <p class="text-gray-600 mb-4">
-            Enjoy aerial views of breathtaking landscapes.
-          </p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Hot%20Air%20Balloon"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/helicoptertour.jpg"
-          alt="Heli Service"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Heli Service</h3>
-          <p class="text-gray-600 mb-4">
-            Private helicopter tours for exclusive experiences.
-          </p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Heli%20Service"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
-
-      <div
-        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      >
-        <img
-          src="images/glider.jpg"
-          alt="Glider"
-          class="w-full h-48 object-cover"
-        />
-        <div class="p-4">
-          <h3 class="text-lg font-semibold mb-2">Glider</h3>
-          <p class="text-gray-600 mb-4">
-            Experience peaceful glider rides over scenic landscapes.
-          </p>
-          <a
-            href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Glider"
-            target="_blank"
-            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-          >
-            View Details
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="bg-gray-900 text-gray-300">
-      <div class="max-w-7xl mx-auto px-4 py-8 text-center">
-        <div class="h-px bg-gray-700/50 mb-4"></div>
-        <p class="text-sm">
-          © 2026 Muktinath Darshan Tours & Travels. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
-  </body>
 </html>
