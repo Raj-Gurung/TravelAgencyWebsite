@@ -1,307 +1,232 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muktinath Darshan Tours & Travels</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../static/css/style.css" />
-    <script src="../static/js/main.js" defer></script>
-  </head>
-  <body class="font-sans text-gray-800">
-    <!-- navbar -->
-    <nav
-      class="bg-white fixed w-full top-0 z-50 border-b border-gray-200 shadow-sm"
-    >
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-          <a href="index.html" class="flex items-center space-x-4">
-            <img
-              src="images/muktinath.png"
-              alt="Muktinath Darshan"
-              class="h-16"
-            />
-            <span class="text-lg font-semibold text-blue-900"
-              >Muktinath Darshan</span
-            >
-          </a>
 
-          <div class="hidden md:flex items-center space-x-8">
-            <a href="index.html" class="text-gray-700 hover:text-blue-600"
-              >Home</a
-            >
-            <a href="services.html" class="text-gray-700 hover:text-blue-600"
-              >Services</a
-            >
-            <a href="gallery.html" class="text-gray-700 hover:text-blue-600"
-              >Gallery</a
-            >
-            <a href="about.html" class="text-gray-700 hover:text-blue-600"
-              >About</a
-            >
-            <a href="contact.html" class="text-gray-700 hover:text-blue-600"
-              >Contact</a
-            >
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muktinath Darshan Tours & Travels</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/main.js" defer></script>
+</head>
 
-          <a
-            href="https://wa.me/9806518595?text=Hello%2C%20I%20want%20to%20enquire"
-            target="_blank"
-            class="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium"
-          >
-            Enquire on WhatsApp
-          </a>
+<body class="font-sans text-gray-800">
+  <!-- navbar -->
+  <nav class="bg-white fixed w-full top-0 z-50 border-b border-gray-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-4">
+          <img src="images/muktinath.png" alt="Muktinath Darshan" class="h-16" />
+          <span class="text-lg font-semibold text-blue-900">Muktinath Darshan</span>
+        </a>
 
-          <button id="menu-btn" class="md:hidden text-2xl text-gray-700">
-            ☰
-          </button>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="services.html" class="text-gray-700 hover:text-blue-600">Services</a>
+          <a href="gallery.html" class="text-gray-700 hover:text-blue-600">Gallery</a>
+          <a href="about.html" class="text-gray-700 hover:text-blue-600">About</a>
+          <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
         </div>
-      </div>
 
-      <div
-        id="mobile-menu"
-        class="hidden md:hidden bg-white border-t border-gray-200"
-      >
-        <div class="px-4 py-4 space-y-3">
-          <a href="index.html" class="block text-gray-700">Home</a>
-          <a href="services.html" class="block text-gray-700">Services</a>
-          <a href="gallery.html" class="block text-gray-700">Gallery</a>
-          <a href="about.html" class="block text-gray-700">About</a>
-          <a href="contact.html" class="block text-gray-700">Contact</a>
-          <a
-            href="https://wa.me/9806518595?text=Hello%2C%20I%20want%20to%20enquire"
-            target="_blank"
-            class="block text-center bg-green-600 text-white py-2 rounded-lg"
-          >
-            WhatsApp
-          </a>
-        </div>
-      </div>
-    </nav>
+        <a href="https://wa.me/9806518595?text=Hello%2C%20I%20want%20to%20enquire" target="_blank"
+          class="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+          Enquire on WhatsApp
+        </a>
 
-    <!-- Image -->
-    <div class="pt-20">
-      <img
-        src="images/hiace.png"
-        alt="Hiace Vehicle"
-        class="w-full h-auto"
-      />
-      <div
-        class="absolute inset-0 flex items-center justify-start pl-10 md:pl-20"
-      >
-        <form id="search-form" class="flex items-center w-11/12 md:w-2/5 shadow-xl rounded-lg overflow-hidden">
-          <input
-            id="search-input"
-            type="text"
-            placeholder="Search for tours, e.g. Paragliding..."
-            class="flex-1 px-4 py-3 border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
-          />
-          <button
-            type="submit"
-            class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 font-semibold transition-colors"
-          >
-            🔍 Search
-          </button>
-        </form>
+        <button id="menu-btn" class="md:hidden text-2xl text-gray-700">
+          ☰
+        </button>
       </div>
     </div>
 
-    <!-- Services -->
-    <div class="container mx-auto px-4 py-12">
-      <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">
-        Our Featured Services
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+      <div class="px-4 py-4 space-y-3">
+        <a href="index.html" class="block text-gray-700">Home</a>
+        <a href="services.html" class="block text-gray-700">Services</a>
+        <a href="gallery.html" class="block text-gray-700">Gallery</a>
+        <a href="about.html" class="block text-gray-700">About</a>
+        <a href="contact.html" class="block text-gray-700">Contact</a>
+        <a href="https://wa.me/9806518595?text=Hello%2C%20I%20want%20to%20enquire" target="_blank"
+          class="block text-center bg-green-600 text-white py-2 rounded-lg">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Image -->
+  <div class="pt-20">
+    <img src="images/hiace.png" alt="Hiace Vehicle" class="w-full h-auto" />
+    <div class="absolute inset-0 flex items-center justify-start pl-10 md:pl-20">
+      <form id="search-form" class="flex items-center w-11/12 md:w-2/5 shadow-xl rounded-lg overflow-hidden">
+        <input id="search-input" type="text" placeholder="Search for tours, e.g. Paragliding..."
+          class="flex-1 px-4 py-3 border-0 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800" />
+        <button type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 font-semibold transition-colors">
+          🔍 Search
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+      Our Featured Services
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="images/shared_vechicle.jpg" alt="Shared Vehicle" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Shared Vehicle</h3>
+          <p class="text-gray-600 mb-4">
+            Comfortable shared travel options for tourists.
+          </p>
+          <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Shared%20Vehicle"
+            target="_blank"
+            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+            View Details
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="images/paragliding.jpg" alt="Paragliding" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Paragliding</h3>
+          <p class="text-gray-600 mb-4">
+            Experience the thrill of flying over scenic landscapes.
+          </p>
+          <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Paragliding" target="_blank"
+            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+            View Details
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <img src="images/zipflyer.jpg" alt="Zip Flyer" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h3 class="text-lg font-semibold mb-2">Zip Flyer</h3>
+          <p class="text-gray-600 mb-4">Zip across breathtaking views.</p>
+          <a href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Zip%20Flyer" target="_blank"
+            class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+            View Details
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testominal -->
+  <div class="bg-gray-900 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold text-white mb-10 text-center">
+        What Our Customers Say
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div
-          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <img
-            src="images/shared_vechicle.jpg"
-            alt="Shared Vehicle"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Shared Vehicle</h3>
-            <p class="text-gray-600 mb-4">
-              Comfortable shared travel options for tourists.
-            </p>
-            <a
-              href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Shared%20Vehicle"
-              target="_blank"
-              class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-            >
-              View Details
-            </a>
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="text-yellow-400 text-lg mb-3">★★★★★</div>
+          <p class="text-gray-300 mb-4">
+            Our trip to Muktinath was truly peaceful and well-organized.
+            Everything was planned perfectly and the journey felt smooth.
+          </p>
+          <div class="border-t border-gray-700 pt-4">
+            <h3 class="font-semibold text-white">Sita Sharma</h3>
+            <p class="text-sm text-gray-400">Kathmandu</p>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div
-          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <img
-            src="images/paragliding.jpg"
-            alt="Paragliding"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Paragliding</h3>
-            <p class="text-gray-600 mb-4">
-              Experience the thrill of flying over scenic landscapes.
-            </p>
-            <a
-              href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Paragliding"
-              target="_blank"
-              class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-            >
-              View Details
-            </a>
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="text-yellow-400 text-lg mb-3">★★★★★</div>
+          <p class="text-gray-300 mb-4">
+            The paragliding experience in Pokhara was amazing. The team made
+            us feel safe and confident throughout.
+          </p>
+          <div class="border-t border-gray-700 pt-4">
+            <h3 class="font-semibold text-white">Ram Thapa</h3>
+            <p class="text-sm text-gray-400">Pokhara</p>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div
-          class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-        >
-          <img
-            src="images/zipflyer.jpg"
-            alt="Zip Flyer"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-4">
-            <h3 class="text-lg font-semibold mb-2">Zip Flyer</h3>
-            <p class="text-gray-600 mb-4">Zip across breathtaking views.</p>
-            <a
-              href="https://wa.me/9806518595?text=Hello,%20I%20want%20to%20enquire%20about%20Zip%20Flyer"
-              target="_blank"
-              class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-            >
-              View Details
-            </a>
+        <div class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <div class="text-yellow-400 text-lg mb-3">★★★★★</div>
+          <p class="text-gray-300 mb-4">
+            Muktinath Darshan Tours made our journey very comfortable. Clean
+            vehicles, polite staff, and excellent planning.
+          </p>
+          <div class="border-t border-gray-700 pt-4">
+            <h3 class="font-semibold text-white">Anita Koirala</h3>
+            <p class="text-sm text-gray-400">Chitwan</p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Testominal -->
-    <div class="bg-gray-900 py-12">
-      <div class="container mx-auto px-4">
-        <h2
-          class="text-2xl md:text-3xl font-semibold text-white mb-10 text-center"
-        >
-          What Our Customers Say
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300"
-          >
-            <div class="text-yellow-400 text-lg mb-3">★★★★★</div>
-            <p class="text-gray-300 mb-4">
-              Our trip to Muktinath was truly peaceful and well-organized.
-              Everything was planned perfectly and the journey felt smooth.
-            </p>
-            <div class="border-t border-gray-700 pt-4">
-              <h3 class="font-semibold text-white">Sita Sharma</h3>
-              <p class="text-sm text-gray-400">Kathmandu</p>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300"
-          >
-            <div class="text-yellow-400 text-lg mb-3">★★★★★</div>
-            <p class="text-gray-300 mb-4">
-              The paragliding experience in Pokhara was amazing. The team made
-              us feel safe and confident throughout.
-            </p>
-            <div class="border-t border-gray-700 pt-4">
-              <h3 class="font-semibold text-white">Ram Thapa</h3>
-              <p class="text-sm text-gray-400">Pokhara</p>
-            </div>
-          </div>
-
-          <div
-            class="bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300"
-          >
-            <div class="text-yellow-400 text-lg mb-3">★★★★★</div>
-            <p class="text-gray-300 mb-4">
-              Muktinath Darshan Tours made our journey very comfortable. Clean
-              vehicles, polite staff, and excellent planning.
-            </p>
-            <div class="border-t border-gray-700 pt-4">
-              <h3 class="font-semibold text-white">Anita Koirala</h3>
-              <p class="text-sm text-gray-400">Chitwan</p>
-            </div>
-          </div>
+  <!-- footer -->
+  <div class="h-px bg-gray-700/50"></div>
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold text-white mb-4">
+            Muktinath Darshan Tours & Travels
+          </h3>
+          <p class="text-sm text-gray-400">
+            Providing safe, comfortable, and memorable travel experiences
+            across Nepal, including Muktinath, Pokhara, and Kathmandu.
+          </p>
         </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li>
+              <a href="services.html" class="hover:text-white">Services</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="hover:text-white">Gallery</a>
+            </li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li>
+              <a href="contact.html" class="hover:text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>📍 Kathmandu & Pokhara, Nepal</li>
+            <li>📞 +977 9806518595</li>
+            <li>✉️ muktinathdarshan@gmail.com</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Enquire Now</h4>
+          <p class="text-sm text-gray-400 mb-4">
+            Plan your journey with us today.
+          </p>
+          <a href="https://wa.me/9806518595?text=Hello%2C%20I%20want%20to%20enquire" target="_blank"
+            class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg text-sm font-medium transition">
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+        © 2026 Muktinath Darshan Tours & Travels. All rights reserved.
       </div>
     </div>
+  </footer>
+</body>
 
-    <!-- footer -->
-    <div class="h-px bg-gray-700/50"></div>
-    <footer class="bg-gray-900 text-gray-300">
-      <div class="max-w-7xl mx-auto px-4 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div>
-            <h3 class="text-xl font-semibold text-white mb-4">
-              Muktinath Darshan Tours & Travels
-            </h3>
-            <p class="text-sm text-gray-400">
-              Providing safe, comfortable, and memorable travel experiences
-              across Nepal, including Muktinath, Pokhara, and Kathmandu.
-            </p>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
-            <ul class="space-y-2 text-sm">
-              <li><a href="index.html" class="hover:text-white">Home</a></li>
-              <li>
-                <a href="services.html" class="hover:text-white">Services</a>
-              </li>
-              <li>
-                <a href="gallery.html" class="hover:text-white">Gallery</a>
-              </li>
-              <li><a href="about.html" class="hover:text-white">About</a></li>
-              <li>
-                <a href="contact.html" class="hover:text-white">Contact</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Contact Us</h4>
-            <ul class="space-y-2 text-sm text-gray-400">
-              <li>📍 Kathmandu & Pokhara, Nepal</li>
-              <li>📞 +977 9806518595</li>
-              <li>✉️ muktinathdarshan@gmail.com</li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="text-lg font-semibold text-white mb-4">Enquire Now</h4>
-            <p class="text-sm text-gray-400 mb-4">
-              Plan your journey with us today.
-            </p>
-            <a
-              href="https://wa.me/9806518595?text=Hello%2C%20I%20want%20to%20enquire"
-              target="_blank"
-              class="inline-block bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-lg text-sm font-medium transition"
-            >
-              WhatsApp Us
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500"
-        >
-          © 2026 Muktinath Darshan Tours & Travels. All rights reserved.
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>
