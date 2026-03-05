@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery</title>
+  <title>Gallery - Muktinath Darshan Tours & Travels</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
   <script src="js/main.js" defer></script>
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ===== NAVBAR (unchanged) ===== -->
   <nav class="bg-white fixed w-full top-0 z-50 border-b border-gray-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
@@ -35,57 +37,467 @@
     </div>
   </nav>
 
-  <div class="pt-24 pb-16 bg-gray-900 text-white text-center">
-    <h1 class="text-3xl md:text-4xl font-semibold mb-4">
-      Our Travel Gallery
-    </h1>
-    <p class="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto">
-      Explore moments from our adventure activities, sightseeing tours, and
-      religious journeys across Nepal.
+  <!-- ===== HERO BANNER ===== -->
+  <div class="relative pt-16 overflow-hidden" style="height:340px;">
+    <img src="images/sarangkot.jpg" alt="Gallery Hero"
+      style="width:100%;height:100%;object-fit:cover;transform:scale(1.06);" />
+    <div
+      style="position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,15,40,0.65) 0%,rgba(10,15,40,0.45) 50%,rgba(10,15,40,0.78) 100%);">
+    </div>
+    <div
+      style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 1rem;">
+      <span
+        style="display:inline-block;background:rgba(29,78,216,0.75);color:#fff;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:999px;margin-bottom:1rem;backdrop-filter:blur(6px);">
+        📸 Visual Journey
+      </span>
+      <h1
+        style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;color:#fff;line-height:1.1;text-shadow:0 2px 20px rgba(0,0,0,0.5);">
+        Our Travel Gallery
+      </h1>
+      <p style="color:#d1d5db;margin-top:0.9rem;font-size:1rem;max-width:580px;line-height:1.6;">
+        Breathtaking moments from adventure activities, scenic sightseeing, and spiritual journeys across Nepal.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== FILTER TABS ===== -->
+  <div
+    style="position:sticky;top:64px;z-index:40;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-bottom:1px solid #e5e7eb;box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+    <div
+      style="max-width:1200px;margin:0 auto;padding:0.75rem 1rem;display:flex;align-items:center;justify-content:center;gap:0.5rem;flex-wrap:wrap;">
+      <button onclick="filterGallery('all')" id="btn-all" class="filter-btn active-filter">🏔️ All Photos</button>
+      <button onclick="filterGallery('adventure')" id="btn-adventure" class="filter-btn">🪂 Adventure</button>
+      <button onclick="filterGallery('sightseeing')" id="btn-sightseeing" class="filter-btn">🌄 Sightseeing</button>
+      <button onclick="filterGallery('religious')" id="btn-religious" class="filter-btn">🛕 Religious</button>
+    </div>
+  </div>
+
+  <!-- ===== GALLERY GRID ===== -->
+  <div style="max-width:1200px;margin:0 auto;padding:3rem 1rem 4rem;">
+
+    <div id="gallery-grid" class="gallery-masonry">
+
+      <!-- Adventure -->
+      <div class="gallery-item" data-cat="adventure" data-label="Paragliding" data-src="images/paragliding.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/paragliding.jpg" alt="Paragliding" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🪂 Adventure</span>
+          <span class="g-title">Paragliding</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item gtall" data-cat="adventure" data-label="Zip Flyer" data-src="images/zipflyer.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/zipflyer.jpg" alt="Zip Flyer" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🪂 Adventure</span>
+          <span class="g-title">Zip Flyer</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="adventure" data-label="Rafting – Seti River" data-src="images/rafting.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/rafting.jpg" alt="Rafting" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🪂 Adventure</span>
+          <span class="g-title">Rafting – Seti River</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item gtall" data-cat="adventure" data-label="Trekking Trails" data-src="images/trekking.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/trekking.jpg" alt="Trekking" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🪂 Adventure</span>
+          <span class="g-title">Trekking Trails</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="adventure" data-label="Hot Air Balloon" data-src="images/hotairballoon.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/hotairballoon.jpg" alt="Hot Air Balloon" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🪂 Adventure</span>
+          <span class="g-title">Hot Air Balloon</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="adventure" data-label="Glider Ride" data-src="images/glider.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/glider.jpg" alt="Glider" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🪂 Adventure</span>
+          <span class="g-title">Glider Ride</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <!-- Sightseeing -->
+      <div class="gallery-item gtall" data-cat="sightseeing" data-label="Pokhara Valley" data-src="images/pokhara.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/pokhara.jpg" alt="Pokhara" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🌄 Sightseeing</span>
+          <span class="g-title">Pokhara Valley</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="sightseeing" data-label="Sarangkot Sunrise" data-src="images/sarangkot.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/sarangkot.jpg" alt="Sarangkot" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🌄 Sightseeing</span>
+          <span class="g-title">Sarangkot Sunrise</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="sightseeing" data-label="Muktinath Landscape" data-src="images/muktinath2.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/muktinath2.jpg" alt="Muktinath" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🌄 Sightseeing</span>
+          <span class="g-title">Muktinath Landscape</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="sightseeing" data-label="Kathmandu City" data-src="images/kathmandu.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/kathmandu.jpg" alt="Kathmandu" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🌄 Sightseeing</span>
+          <span class="g-title">Kathmandu City</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="sightseeing" data-label="Helicopter Tour" data-src="images/helicoptertour.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/helicoptertour.jpg" alt="Helicopter Tour" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🌄 Sightseeing</span>
+          <span class="g-title">Helicopter Tour</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <!-- Religious -->
+      <div class="gallery-item gtall" data-cat="religious" data-label="Lumbini – Birthplace of Buddha"
+        data-src="images/lumbini.jpg" onclick="openLightbox(this)">
+        <img src="images/lumbini.jpg" alt="Lumbini" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🛕 Religious</span>
+          <span class="g-title">Lumbini – Birthplace of Buddha</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="religious" data-label="Muktinath Temple" data-src="images/muktinath1.jpg"
+        onclick="openLightbox(this)">
+        <img src="images/muktinath1.jpg" alt="Muktinath Temple" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🛕 Religious</span>
+          <span class="g-title">Muktinath Temple</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="religious" data-label="Pashupatinath Temple"
+        data-src="images/pashupatinath.png" onclick="openLightbox(this)">
+        <img src="images/pashupatinath.png" alt="Pashupatinath" class="gimg" />
+        <div class="gallery-overlay">
+          <span class="g-cat">🛕 Religious</span>
+          <span class="g-title">Pashupatinath Temple</span>
+          <span class="g-hint">Click to view</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty state -->
+    <div id="no-gallery-results" class="hidden" style="text-align:center;padding:5rem 0;color:#9ca3af;">
+      <div style="font-size:3.5rem;margin-bottom:1rem;">📷</div>
+      <p style="font-size:1.2rem;font-weight:600;">No photos in this category yet.</p>
+    </div>
+
+    <!-- Photo count badge -->
+    <p id="photo-count"
+      style="text-align:center;font-size:0.82rem;color:#6b7280;margin-top:2rem;font-weight:500;letter-spacing:0.03em;">
     </p>
   </div>
 
-  <div class="max-w-7xl mx-auto px-4 py-16 space-y-16">
-    <section>
-      <h2 class="text-2xl font-semibold mb-6 text-center">
-        Adventure Activities
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="images/paragliding.jpg" class="rounded-lg object-cover h-64 w-full" />
-        <img src="images/zipflyer.jpg" class="rounded-lg object-cover h-64 w-full" />
-        <img src="images/rafting.jpg" class="rounded-lg object-cover h-64 w-full" />
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" onclick="closeLightboxOnBg(event)"
+    style="display:none;position:fixed;inset:0;background:rgba(5,8,22,0.94);z-index:9999;align-items:center;justify-content:center;backdrop-filter:blur(10px);">
+    <div
+      style="position:relative;display:flex;flex-direction:column;align-items:center;max-width:92vw;max-height:92vh;">
+      <button onclick="closeLightbox()" title="Close"
+        style="position:fixed;top:1rem;right:1.2rem;background:rgba(255,255,255,0.13);color:#fff;border:none;width:44px;height:44px;border-radius:50%;font-size:1.1rem;cursor:pointer;z-index:10001;transition:background 0.2s;"
+        onmouseover="this.style.background='rgba(255,255,255,0.28)'"
+        onmouseout="this.style.background='rgba(255,255,255,0.13)'">✕</button>
+      <button onclick="prevPhoto()" title="Previous"
+        style="position:fixed;left:1rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.13);color:#fff;border:none;width:50px;height:50px;border-radius:50%;font-size:1.5rem;cursor:pointer;z-index:10001;transition:background 0.2s;"
+        onmouseover="this.style.background='rgba(255,255,255,0.28)'"
+        onmouseout="this.style.background='rgba(255,255,255,0.13)'">&#8592;</button>
+      <button onclick="nextPhoto()" title="Next"
+        style="position:fixed;right:1rem;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.13);color:#fff;border:none;width:50px;height:50px;border-radius:50%;font-size:1.5rem;cursor:pointer;z-index:10001;transition:background 0.2s;"
+        onmouseover="this.style.background='rgba(255,255,255,0.28)'"
+        onmouseout="this.style.background='rgba(255,255,255,0.13)'">&#8594;</button>
+      <img id="lightbox-img" src="" alt=""
+        style="max-width:88vw;max-height:80vh;object-fit:contain;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,0.7);" />
+      <div
+        style="display:flex;justify-content:space-between;align-items:center;width:100%;margin-top:0.85rem;padding:0 0.5rem;">
+        <span id="lightbox-label" style="color:#e5e7eb;font-size:0.95rem;font-weight:600;"></span>
+        <span id="lightbox-counter" style="color:#9ca3af;font-size:0.78rem;"></span>
       </div>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold mb-6 text-center">
-        Sightseeing Tours
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="images/pokhara.jpg" class="rounded-lg object-cover h-64 w-full" />
-        <img src="images/sarangkot.jpg" class="rounded-lg object-cover h-64 w-full" />
-        <img src="images/muktinath2.jpg" class="rounded-lg object-cover h-64 w-full" />
-      </div>
-    </section>
-
-    <section>
-      <h2 class="text-2xl font-semibold mb-6 text-center">Religious Tours</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <img src="images/lumbini.jpg" class="rounded-lg object-cover h-64 w-full" />
-        <img src="images/muktinath1.jpg" class="rounded-lg object-cover h-64 w-full" />
-        <img src="images/pashupatinath.png" class="rounded-lg object-cover h-64 w-full" />
-      </div>
-    </section>
+    </div>
   </div>
 
+  <!-- ===== FOOTER (unchanged) ===== -->
   <footer class="bg-gray-900 text-gray-300">
     <div class="max-w-7xl mx-auto px-4 py-8 text-center">
       <div class="h-px bg-gray-700/50 mb-4"></div>
       <p class="text-sm">
-        © 2026 Muktinath Darshan Tours & Travels. All Rights Reserved.
+        &copy; 2026 Muktinath Darshan Tours &amp; Travels. All Rights Reserved.
       </p>
     </div>
   </footer>
+
+  <!-- ===== STYLES ===== -->
+  <style>
+    /* ---- Filter buttons ---- */
+    .filter-btn {
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.83rem;
+      font-weight: 600;
+      border: 2px solid transparent;
+      background: #f3f4f6;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.22s ease;
+    }
+
+    .filter-btn:hover {
+      background: #dbeafe;
+      color: #1d4ed8;
+      border-color: #93c5fd;
+    }
+
+    .active-filter {
+      background: #1d4ed8 !important;
+      color: #fff !important;
+      border-color: #1d4ed8 !important;
+      box-shadow: 0 4px 16px rgba(29, 78, 216, 0.38);
+    }
+
+    /* ---- Masonry grid ---- */
+    .gallery-masonry {
+      columns: 1;
+      column-gap: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .gallery-masonry {
+        columns: 2;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .gallery-masonry {
+        columns: 3;
+      }
+    }
+
+    /* ---- Gallery cards ---- */
+    .gallery-item {
+      position: relative;
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
+      transition: transform 0.38s cubic-bezier(.25, .8, .25, 1), box-shadow 0.38s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
+    }
+
+    .gimg {
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      height: 230px;
+      transition: transform 0.55s ease;
+    }
+
+    .gtall .gimg {
+      height: 370px;
+    }
+
+    .gallery-item:hover .gimg {
+      transform: scale(1.08);
+    }
+
+    /* ---- Hover overlay ---- */
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 12, 35, 0.9) 0%, rgba(8, 12, 35, 0.25) 55%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .g-cat {
+      font-size: 0.67rem;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #93c5fd;
+      margin-bottom: 4px;
+    }
+
+    .g-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+
+    .g-hint {
+      font-size: 0.72rem;
+      color: #d1d5db;
+      margin-top: 5px;
+    }
+
+    /* ---- Hidden filtered items ---- */
+    .gallery-item.hidden-item {
+      display: none;
+    }
+
+    /* ---- Fade-in on load ---- */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-item {
+      animation: fadeUp 0.5s ease both;
+    }
+
+    /* ---- Lightbox flex display helper ---- */
+    #lightbox.lb-open {
+      display: flex !important;
+    }
+  </style>
+
+  <!-- ===== GALLERY SCRIPT ===== -->
+  <script>
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+    let visible = [...galleryItems];
+    let current = 0;
+
+    function filterGallery(cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active-filter'));
+      document.getElementById('btn-' + cat).classList.add('active-filter');
+
+      visible = [];
+      let delay = 0;
+      galleryItems.forEach(item => {
+        const show = cat === 'all' || item.dataset.cat === cat;
+        if (show) {
+          item.classList.remove('hidden-item');
+          item.style.animationDelay = delay + 's';
+          item.style.animation = 'none';
+          item.offsetHeight; // reflow
+          item.style.animation = '';
+          visible.push(item);
+          delay += 0.055;
+        } else {
+          item.classList.add('hidden-item');
+        }
+      });
+
+      document.getElementById('photo-count').textContent =
+        visible.length + ' photo' + (visible.length !== 1 ? 's' : '') + ' shown';
+      document.getElementById('no-gallery-results').classList.toggle('hidden', visible.length > 0);
+    }
+
+    function openLightbox(el) {
+      current = visible.indexOf(el);
+      showLightboxPhoto(current);
+      document.getElementById('lightbox').classList.add('lb-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function showLightboxPhoto(idx) {
+      const item = visible[idx];
+      const img = document.getElementById('lightbox-img');
+      img.style.opacity = '0';
+      img.src = item.dataset.src;
+      img.alt = item.dataset.label;
+      img.onload = () => { img.style.transition = 'opacity 0.25s'; img.style.opacity = '1'; };
+      document.getElementById('lightbox-label').textContent = item.dataset.label;
+      document.getElementById('lightbox-counter').textContent = (idx + 1) + ' / ' + visible.length;
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('lb-open');
+      document.body.style.overflow = '';
+    }
+
+    function closeLightboxOnBg(e) {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+
+    function prevPhoto() {
+      current = (current - 1 + visible.length) % visible.length;
+      showLightboxPhoto(current);
+    }
+
+    function nextPhoto() {
+      current = (current + 1) % visible.length;
+      showLightboxPhoto(current);
+    }
+
+    document.addEventListener('keydown', e => {
+      const lb = document.getElementById('lightbox');
+      if (!lb.classList.contains('lb-open')) return;
+      if (e.key === 'ArrowRight') nextPhoto();
+      if (e.key === 'ArrowLeft') prevPhoto();
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // Init
+    filterGallery('all');
+  </script>
+
 </body>
 
 </html>
